@@ -6,7 +6,50 @@
 <META CONTENT="0" HTTP-EQUIV="Expires">
 <meta value="Thu, 16 Mar 2000 11:00:00 GMT" http-equiv="expires">
 <style type="text/css">  
-      body     { color: #000000; background-color: #F8C301; padding: 0px; margin: 0px;}
+      html, body { 
+        color: #000000; 
+        background-color: #F8C301; 
+        padding: 0px; 
+        margin: 0px; 
+        overflow-y: auto !important; 
+        scrollbar-width: thin; 
+        scrollbar-color: #0088cc #f0f0f0;
+      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f0f0f0; }
+      ::-webkit-scrollbar-thumb { background: #0088cc; border-radius: 4px; }
+      .scroll-nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: rgba(248, 195, 1, 0.95);
+        text-align: center;
+        padding: 4px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+      .scroll-btn {
+        background: #0088cc;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 2px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 11px;
+        margin: 0 4px;
+      }
+      .scroll-btn:hover { background: #006699; }
+      .delete-entry-btn {
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 2px 6px;
+        font-size: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        float: right;
+        margin-top: -18px;
+      }
       *        { font-family:  Verdana; font-size: 12px; line-height:16px; padding: 0px; margin: 0px;}
       pre, tt, code, samp, kbd, xmp, listing, plaintext { font-family: monospace; }
       h2       { font-size: 13px; color:#336600;}
@@ -453,16 +496,43 @@ INDIA CHRISTIAN YOUTH OF CHICAGO BASKETBALL TOURNAMENT</div>
 <script src="js/auth.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Add scroll control buttons at top for both viewers and admins
+  const scrollNavBar = document.createElement('div');
+  scrollNavBar.className = 'scroll-nav-bar';
+  scrollNavBar.innerHTML = `
+    <button class="scroll-btn" id="btn-scroll-up">▲ Scroll Up</button>
+    <button class="scroll-btn" id="btn-scroll-down">▼ Scroll Down</button>
+  `;
+  document.body.insertBefore(scrollNavBar, document.body.firstChild);
+
+  document.getElementById('btn-scroll-up').addEventListener('click', function() {
+    window.scrollBy({ top: -150, behavior: 'smooth' });
+  });
+
+  document.getElementById('btn-scroll-down').addEventListener('click', function() {
+    window.scrollBy({ top: 150, behavior: 'smooth' });
+  });
+
+  // Admin controls
   if (localStorage.getItem('icccna_admin_session')) {
     const adminControls = document.createElement('div');
-    adminControls.style.cssText = "background:#0088cc; color:#fff; padding:10px; margin-bottom:15px; border-radius:5px;";
+    adminControls.style.cssText = "background:#0088cc; color:#fff; padding:8px; margin:5px; border-radius:5px;";
     adminControls.innerHTML = `
-      <strong>➕ Add New Event Entry:</strong><br/>
-      <input id="new-event-title" placeholder="Year & Venue" style="padding:4px; margin-top:5px; width:45%;">
-      <input id="new-event-desc" placeholder="City & Location" style="padding:4px; margin-top:5px; width:45%;">
-      <button id="btn-add-event" style="padding:4px 10px; background:#fff; color:#0088cc; border:none; font-weight:bold; cursor:pointer;">Add</button>
+      <strong>⚙️ Admin Controls: Add Event</strong><br/>
+      <input id="new-event-title" placeholder="Year & Venue" style="padding:4px; margin-top:4px; width:45%;">
+      <input id="new-event-desc" placeholder="City & Location" style="padding:4px; margin-top:4px; width:45%;">
+      <button id="btn-add-event" style="padding:4px 8px; background:#fff; color:#0088cc; border:none; font-weight:bold; cursor:pointer;">+ Add</button>
     `;
-    document.body.insertBefore(adminControls, document.body.firstChild);
+    document.body.insertBefore(adminControls, scrollNavBar.nextSibling);
+
+    // Add delete buttons to existing entries
+    document.querySelectorAll('.article').forEach(art => {
+      const delBtn = document.createElement('button');
+      delBtn.className = 'delete-entry-btn';
+      delBtn.innerHTML = '🗑️ Delete';
+      delBtn.onclick = function() { art.remove(); };
+      art.appendChild(delBtn);
+    });
 
     document.getElementById('btn-add-event').addEventListener('click', function() {
       const title = document.getElementById('new-event-title').value.trim();
@@ -472,10 +542,12 @@ document.addEventListener('DOMContentLoaded', function() {
         article.className = 'article';
         article.style.paddingLeft = '10px';
         article.innerHTML = `
-          <div class="title style1" style="padding-top:4px;">${title}</div>
-          <div align="left" class="style2"><strong>${desc}</strong></div>
+          <div class="title style1" style="padding-top:4px;" contenteditable="true">${title}</div>
+          <div align="left" class="style2"><strong contenteditable="true">${desc}</strong></div>
+          <button class="delete-entry-btn">🗑️ Delete</button>
           <br>
         `;
+        article.querySelector('.delete-entry-btn').onclick = function() { article.remove(); };
         document.body.appendChild(article);
         document.getElementById('new-event-title').value = '';
         document.getElementById('new-event-desc').value = '';
