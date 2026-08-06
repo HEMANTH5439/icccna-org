@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: HEMANTH5439/icccna-org
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "pages"
+    label: "Pages & Announcements"
+    files:
+      - file: "content/home.json"
+        label: "Home Page Content"
+        name: "home"
+        fields:
+          - { label: "Welcome Title", name: "welcome_title", widget: "string" }
+          - { label: "Passion Play Intro", name: "passion_play_intro", widget: "text" }
+          - { label: "Mission Statement", name: "mission_statement", widget: "text" }
+          - { label: "Program Highlights", name: "program_highlights", widget: "text" }
+          - { label: "Practice Info", name: "practice_info", widget: "text" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+
+      - file: "content/programs.json"
+        label: "Programs & Events"
+        name: "programs"
+        fields:
+          - { label: "Walk & Run for Jesus Info", name: "run_for_jesus", widget: "text" }
+          - { label: "Passion Play Info", name: "passion_play", widget: "text" }
+          - { label: "Spelling Bee Info", name: "spelling_bee", widget: "text" }
+          - { label: "Basketball Tournament Info", name: "basketball", widget: "text" }
+
+  - name: "newsletters"
+    label: "Newsletters & Uploads"
+    folder: "content/newsletters"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "PDF File", name: "pdf", widget: "file" }
+      - { label: "Summary", name: "summary", widget: "text" }
