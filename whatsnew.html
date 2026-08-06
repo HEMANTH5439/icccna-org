@@ -6,50 +6,7 @@
 <META CONTENT="0" HTTP-EQUIV="Expires">
 <meta value="Thu, 16 Mar 2000 11:00:00 GMT" http-equiv="expires">
 <style type="text/css">  
-      html, body { 
-        color: #000000; 
-        background-color: #F8C301; 
-        padding: 10px; 
-        margin: 0px; 
-        overflow-y: scroll !important; 
-        scrollbar-width: auto; 
-        scrollbar-color: #0088cc #f8c301;
-      }
-      ::-webkit-scrollbar { width: 10px; }
-      ::-webkit-scrollbar-track { background: #f8c301; }
-      ::-webkit-scrollbar-thumb { background: #0088cc; border-radius: 5px; border: 2px solid #f8c301; }
-      ::-webkit-scrollbar-thumb:hover { background: #006699; }
-      .admin-add-btn {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: #0088cc;
-        color: #fff;
-        font-size: 22px;
-        font-weight: bold;
-        border: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        cursor: pointer;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .admin-add-btn:hover { background: #006699; transform: scale(1.08); }
-      .delete-entry-btn {
-        background: #e74c3c;
-        color: #fff;
-        border: none;
-        padding: 2px 6px;
-        font-size: 10px;
-        border-radius: 3px;
-        cursor: pointer;
-        float: right;
-        margin-top: -18px;
-      }
+      body     { color: #000000; background-color: #F8C301; padding: 0px; margin: 0px;}
       *        { font-family:  Verdana; font-size: 12px; line-height:16px; padding: 0px; margin: 0px;}
       pre, tt, code, samp, kbd, xmp, listing, plaintext { font-family: monospace; }
       h2       { font-size: 13px; color:#336600;}
@@ -68,9 +25,121 @@
       .more a:link   {color: #000000; font-weight: bold;text-decoration: underline;font-size: 11px;}
       .more a:visited { color: #000000; font-weight: bold;text-decoration: underline; font-size: 11px;}
       .more a:hover  { color: #000000;font-weight: bold; text-decoration: none; font-size: 11px;}
+
+        
+      
+      
     .style1 {color: #000000}
 .style2 {font-size: 11px; font-weight: normal; color: #000000;}
 </style>
+<script src="https://meltwaternews.com/js/jquery_1.2.js" type="text/javascript"></script><script type="text/javascript">
+$(function(){
+ var speed = 50;
+ var feedheight = 260;
+ var stoponmouseover = 1 
+ var fh = feedheight - 20;
+ var eq0 = $("div.article:eq(0)").height();
+ var speed2 = speed * .7
+ var transition = 1;
+ var status = 0;
+ var fall = $("div.article").length - 1;
+ btop = 0;
+  ttest = $("div.article:eq(0)").height();
+ var kjoer;
+var fdir= 0;
+
+
+ var eq0 = $("div.article:eq(0)").height();
+ $("<div></div>").addClass("fcontainer").css("overflow", "hidden").css("position", "relative").height(fh).appendTo("body");
+ $("div.article").appendTo("div.fcontainer");
+ $("<div></div>").addClass("feed").width("100%").appendTo("body");
+ $("div.fcontainer").appendTo("div.feed");
+ $("<div></div>").addClass("fdown").height(10).css("text-align", "center").insertAfter("div.fcontainer");
+ $("<img>").attr("src", "http://meltwaternews.com/ext/a3logics/APAC/Images/FBN_85110-arrbt.png").appendTo("div.fdown");
+ $("<div></div>").addClass("fup").height(10).css("text-align", "center").insertBefore("div.fcontainer");
+ $("<img>").attr("src", "http://meltwaternews.com/ext/a3logics/APAC/Images/FBN_85110-arrup.png").appendTo("div.fup");
+ //$("div.article").each(function(){
+ //$(this).css("top", btop).css("position", "absolute");
+ //btop = btop + $(this).height();
+ //});
+ function newdim(init){
+ clearInterval(kjoer)
+ dim = [ $("body").width(),$(window).height()-25]
+ $(".fcontainer").width(Math.round(dim[0]-22)).height(dim[1]);
+ if ($.browser.mozilla && !init){window.location.reload()};
+ btop = 0;
+ $("div.article").each(function(){
+ $(this).css("top", btop).css("position", "absolute");
+ btop = btop + $(this).height(); 
+ });
+ checkdir();
+ };
+ newdim(true);
+ $(window).resize(function(){newdim();})
+
+ function fmove(){
+ $("div.article").each(function(){
+ var atop = parseInt($(this).css("top"));
+ $(this).css("top", atop - 1 + "px");
+ });
+ var atop = parseInt($("div.article:eq(0)").css("top"));
+ if ((0-ttest) == atop)
+ {tick();}
+ else {}
+ };
+ function tick() {
+ var eq0 = btop - $("div.article:eq(0)").height();
+ $("div.article:eq(0)").clone().insertAfter("div.article:eq(" + fall + ")");
+ $("div.article:eq(0)").remove();
+ $("div.article:eq(" + fall + ")").css("position", "absolute").css("top", eq0);
+ ttest = $("div.article:eq(0)").height();
+ };
+function fmoveb() {
+ttest = $("div.article:eq(0)").height();
+ $("div.article").each(function(){
+ var atop = parseInt($(this).css("top"));
+ $(this).css("top", atop + 1 + "px");
+ });
+ var atop = parseInt($("div.article:eq(0)").css("top"));
+ if (0 == atop)
+ {tickb();}
+ else {}
+};
+
+function tickb(eql)
+{
+var eqlast = $("div.article:eq("+fall+")").height();
+$("div.article:eq("+fall+")").clone().insertBefore("div.article:eq(0)").css("top", (0-eqlast));
+};
+
+
+function checkdir(){
+if(fdir == 0){
+kjoer = setInterval(fmove, speed)}
+else{
+kjoer = setInterval(fmoveb, speed);
+};
+};
+
+$("div.fup").hover(function(){
+clearInterval(kjoer);
+kjoer = setInterval(fmove,speed);
+},function(){
+fdir = 0;
+});
+
+$("div.fdown").hover(
+function(){
+var transition = 1;
+clearInterval(kjoer);
+setTimeout(fmoveb, speed2);
+kjoer = setInterval(fmoveb, speed);
+},
+function(){
+fdir = 1;
+});
+
+function paus(){
 if (stoponmouseover == 0){}
 else {
 $("div.fcontainer").hover(
@@ -384,43 +453,32 @@ INDIA CHRISTIAN YOUTH OF CHICAGO BASKETBALL TOURNAMENT</div>
 <script src="js/auth.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Admin controls
   if (localStorage.getItem('icccna_admin_session')) {
-    // Add floating '+' button to add entries
-    const addBtn = document.createElement('button');
-    addBtn.className = 'admin-add-btn';
-    addBtn.innerHTML = '+';
-    addBtn.title = 'Add New Event Entry';
-    document.body.appendChild(addBtn);
+    const adminControls = document.createElement('div');
+    adminControls.style.cssText = "background:#0088cc; color:#fff; padding:10px; margin-bottom:15px; border-radius:5px;";
+    adminControls.innerHTML = `
+      <strong>➕ Add New Event Entry:</strong><br/>
+      <input id="new-event-title" placeholder="Year & Venue" style="padding:4px; margin-top:5px; width:45%;">
+      <input id="new-event-desc" placeholder="City & Location" style="padding:4px; margin-top:5px; width:45%;">
+      <button id="btn-add-event" style="padding:4px 10px; background:#fff; color:#0088cc; border:none; font-weight:bold; cursor:pointer;">Add</button>
+    `;
+    document.body.insertBefore(adminControls, document.body.firstChild);
 
-    // Modal / Prompt to add entry
-    addBtn.addEventListener('click', function() {
-      const title = prompt('Enter Year & Venue (e.g. 2025 - Grace Church):');
-      if (!title) return;
-      const desc = prompt('Enter Location & State (e.g. Chicago, Illinois - USA):');
-      if (!desc) return;
-
-      const article = document.createElement('div');
-      article.className = 'article';
-      article.style.paddingLeft = '10px';
-      article.innerHTML = `
-        <div class="title style1" style="padding-top:4px;" contenteditable="true">${title}</div>
-        <div align="left" class="style2"><strong contenteditable="true">${desc}</strong></div>
-        <button class="delete-entry-btn">🗑️ Delete</button>
-        <br>
-      `;
-      article.querySelector('.delete-entry-btn').onclick = function() { article.remove(); };
-      document.body.insertBefore(article, document.body.firstChild);
-    });
-
-    // Add delete buttons to existing entries in Admin Mode
-    document.querySelectorAll('.article').forEach(art => {
-      if (!art.querySelector('.delete-entry-btn')) {
-        const delBtn = document.createElement('button');
-        delBtn.className = 'delete-entry-btn';
-        delBtn.innerHTML = '🗑️ Delete';
-        delBtn.onclick = function() { art.remove(); };
-        art.appendChild(delBtn);
+    document.getElementById('btn-add-event').addEventListener('click', function() {
+      const title = document.getElementById('new-event-title').value.trim();
+      const desc = document.getElementById('new-event-desc').value.trim();
+      if (title && desc) {
+        const article = document.createElement('div');
+        article.className = 'article';
+        article.style.paddingLeft = '10px';
+        article.innerHTML = `
+          <div class="title style1" style="padding-top:4px;">${title}</div>
+          <div align="left" class="style2"><strong>${desc}</strong></div>
+          <br>
+        `;
+        document.body.appendChild(article);
+        document.getElementById('new-event-title').value = '';
+        document.getElementById('new-event-desc').value = '';
       }
     });
   }
