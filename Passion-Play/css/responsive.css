@@ -1,0 +1,617 @@
+/*start by pooja*/
+
+.network.content_2 { height: auto !important; }
+
+@media only screen and (max-width : 1024px) {
+.home-bottom-left-sec { width:65%; margin:0 3% 0 0; }
+.home-bottom-left-sec .banner a { width:46%; }
+.home-bottom-left-sec .banner img { height:74px; }
+.msg{right:10px;}
+.main-menu nav li.item-125 ul{left: -100px;}
+}
+
+@media only screen and (max-width : 959px) {
+.wrapper { width:100%; }
+#header h1 { width:35%; }
+#header aside { width:64%; }
+.home-bottom-left-sec .banner img { height:74px; width:100%; }
+.inner-bottom-sec { padding:0 1%; }
+.testimonial .left-col, .testimonial .right-col { width:22px; margin:3px 0; }
+.testimonial .left-col { margin:3px 5px 3px 0; }
+.middle-section h4, .how-can-help h4, .what-help-doing h4 { font-size:15px; }
+.right-section h4 { font-size:16px; }
+.press-releases-list tr { padding:0 0 0 13px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.etabs { margin:10px 0 0; width:100%; }
+.tab-container { width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.donate-register { padding:0 1%; width:98%; }
+.what-help-doing p img { margin:10px 10px 0 0; }
+embed, iframe { width:100%;}
+ul.arrow-double.news-list li, ul.arrow-double.salient-list li { width:96%; }
+/*take action*/
+.take-list li { border-top:1px dashed #F8C301; }
+.take-list li, .take-list li.right { background:none; margin:0; padding:10px 0; }
+.take-list li:first-child { border:none; padding:0 0 10px; }
+/*our-work*/
+
+	.inner-middle-sec { padding:0 1%; }
+.inner-middle-sec a strong { font-size:14px; margin:0 1%; }
+.inner-middle-sec a.overview-btn strong, .inner-middle-sec a.doing-btn strong, .inner-middle-sec a.help-btn strong { padding-right:0; padding-bottom:17px; }
+.inner-middle-sec a.overview-btn strong { padding-left:65px; }
+.inner-middle-sec .donate-btn strong { padding-right:21%; padding-left:21%; }
+.inner-middle-sec a strong { background-position:10px center; }
+.inner-middle-sec a.overview-btn strong, .inner-middle-sec a.overview-btn:hover strong, .inner-middle-sec a.overview-btn.active strong { background-position:12px center; }
+.inner-middle-sec a.help-btn strong, .inner-middle-sec a.help-btn:hover strong, .inner-middle-sec a.help-btn.active strong { background-position:15px center; }
+.right-top > object > embed { height:280px; }
+/*Photo Gallery section*/
+
+	.AG_classic .ag_imageThumb { width:100%; }
+/*Video section*/
+
+	#YoutubeGalleryMainContainer2 { width:98%; }
+#header .item-104:hover, #header .item-106:hover { background:none !important; }
+.publication-sec li > ul li span { width:64%; }
+.publication-sec li > ul li > ul li span { width:62%; }
+.publication-sec li span { width:65%; }
+.gift-card-page .listing li { width:42%; margin:0 0 15px 4%; }
+.gift-card-page .listing li:first-child { margin:0 0 14px; }
+/*registration section*/
+
+.registration-table { width:100%; }
+.registration-table table tr.select-col td:first-child { margin-left:0; }
+.registration-table table tr.select-col td { margin:0 0 0 2.4%; }
+.registration-table table td:first-child { width:25%; }
+.registration-table table td { width:71%; }
+.home-slider-msg { margin:0 0 40px; }
+.msg{/*border-bottom:-20px; width:100%; border-right:0; border-left:0; padding:5px 0; right:0; bottom:-57px;*/}
+.feature-sec { padding: 30px 0 32px 18px; }
+div#tipDiv, .network img { display:none; }
+.hidden { display:inline-block !important; vertical-align:top; }
+.mapdesc { width:44% !important; margin:0 auto 5px; height:200px !important; overflow:auto; border:4px solid #ccc !important; margin:0 0 5px!important; }
+.mapdesc h5 { padding:0 0 10px; line-height:22px !important; font-size:14px !important; }
+.mapdesc p { line-height:22px; }
+.mapdesc p >br { display:none; }
+.network-list li a { cursor:inherit; }
+.network.content_2, .mCSB_scrollTools .mCSB_draggerRail { height: 928px !important; overflow: auto; }
+.main-menu nav ul > li.item-122 > ul, .main-menu nav ul > li.item-137 > ul { border-bottom:2px solid #ccc; }
+.main-menu nav ul > li.item-137:hover ul, .main-menu nav ul > li > a:hover, .main-menu nav ul > li.active > a,  .main-menu nav ul > li.item-122:hover ul, nav ul > li.item-104:hover ul, #header .item-104:hover, #header .item-106:hover,  #header .item-104:hover a, #header .item-104.active a, #header .item-106:hover a, #header .item-106.active a,  #header .top-nav li.item-104 > ul, #header .top-nav li.item-106 > ul,  #header .top-nav li.item-104 > ul a, #header .top-nav li.item-106 > ul a { background:#f3f3f3; }
+.location-hide { display:none !important; }
+/* vertical scrollbar */
+.mCustomScrollBox { *width:99%;}
+.mCSB_container { width:auto; margin-right:20px; overflow:hidden; }
+.mCSB_container.mCS_no_scrollbar { margin-right:0; }
+.mCustomScrollBox>.mCSB_scrollTools { width:8px; height:100%; top:0; right:0; }
+.mCSB_scrollTools .mCSB_draggerContainer { position:absolute; top:0; left:0; bottom:2px; right:0; height:auto; }
+.mCSB_scrollTools a+.mCSB_draggerContainer { margin:20px 0 20px 25px; border:1px solid; }
+.mCSB_scrollTools .mCSB_draggerRail { height:100%; margin:0 auto; height:930px; float:right; }
+.mCSB_scrollTools .mCSB_dragger { cursor:pointer; width:100%; height:30px; }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { height:100%; margin:0 auto; text-align:center; float:right; }
+.mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown { display:block; position:relative; height:20px; overflow:hidden; margin:0 auto; cursor:pointer; }
+.mCSB_scrollTools .mCSB_buttonDown { top:100%; margin-top:-40px; }
+/* default scrollbar colors and backgrounds (default theme) */
+.mCustomScrollBox>.mCSB_scrollTools { opacity:0.75; filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */ }
+.mCustomScrollBox:hover>.mCSB_scrollTools { opacity:1; filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)"; /* old ie */ }
+.mCSB_scrollTools .mCSB_draggerRail { background:#f7f7f7; border:1px solid #c7c7c6; }
+/* custom styling */
+/* content_2 scrollbar */
+.content_2 { height:928px; overflow:auto; margin:17px 8px 0 15px; *margin:19px 8px 0 15px;}
+.content_2 .mCSB_scrollTools .mCSB_draggerRail { width:6px; }
+.content_2 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width:6px; background:#b10404; margin:0 1px 0 0; }
+.content_2.content_2-all { height:928px; }
+.msg p { font-size:12px; }
+.feature-sec .figcaption strong{font-size:14px; padding:0;}
+}
+
+@media only screen and (max-width : 959px) and (min-width:768px) {
+#header { padding:0 1%; }
+#header .header-top-sec { margin:0 0 10px; }
+#header .top-nav li { margin:7px 6px 0; }
+#header form input[type="text"] { width:100px; padding:5px 8px; height:17px; }
+#header .social-media li { margin:6px 0; }
+#header nav > ul > li > a { font-size:12px; }
+.main-menu nav ul { margin:0 1px; }
+.main-menu > ul > li{margin:0px 10px;}
+.main-menu nav ul > li > a { padding:13px 4px; }
+.main-menu nav ul > li.item-137 li.item-125, .main-menu nav ul > li.item-137 li.item-138 { width:50%; }
+.main-menu nav ul > li.item-122 > ul, .main-menu nav ul > li.item-137 > ul { width:529px; left:-1px }
+.text-zoom { display:none; }
+
+.search{margin:0;}
+.feature-sec{padding:10px 0 20px;}
+.feature-sec li{margin:0px 8px 0 7px; width:23%;}
+.feature-sec h2, .feature-sec h1, .home-bottom-sec h1, .home-bottom-sec h3 {font-size:16px;}
+.feature-sec .figcaption{ height:90%;}
+
+.home-bottom-left-sec .banner a { width:49%; height:74px; }
+.home-bottom-left-sec { width:65%; margin:0 2% 0 1%; }
+.what-new-sec{width:31%; margin:0;}
+.what-new-sec span { display:none; }
+.what-new-sec h5{padding:5px 0 0; font-size:13px;}
+.what-new-sec .flexslider-vec { padding:5px 10px;   height:300px; }
+.what-new-sec .flex-viewport li { height:152px; }
+.middle-section, .middle-div.col { width:42%; }
+.right-section, .right-div.col{width:26%; }
+.video > object > embed { /*height:228px;*/ height:175px; }
+.search form { margin:0 3px; }
+.footer { margin:0 1%; }
+.footer aside { width:30%; }
+.footer section { width:68%; }
+/*history section*/
+.middle-section h4{padding:0 0 10px;}
+ul.pic-row li{width:92px; margin:0 0 0 6px; }
+.testimonial .profile p{padding:15px 0 0 0; }
+.testimonial .profile img{width:60px; }
+.annual-audited-sec{width: 100%; margin:0 0 10px;}
+.middle-section h2, .middle-section h1, .what-help-doing h2, .how-can-help h2, #donate-page h2, .gift-card-page h3, h3.heading{ font-size:18px; line-height:20px; padding:0 0 10px;}
+/*Leadership start here*/
+.leadership-sec li figure, .leader-details-sec figure { width:95px; }
+.content_2 { margin:17px 8px 30px 5px; }
+.leader-details { margin:0 0 12px 4px; width:55%; }
+/*Financial sections*/
+.annual-audited-sec-in strong { padding:6px 0 6px 7px; }
+.annual-audited-sec-in li { font-size:10px; padding:5px 4px; }
+.annual-audited-sec-in li span { width:36%; word-wrap:break-word; }
+.annual-audited-sec-in li > div a { font-size:10px; }
+/*carrer sections*/
+.middle-section.full { width:73%; padding:0 0 0 2%; }
+.middle-section.full > .right-section { width:28%; }
+.middle-section.full > #content { padding:0; }
+.middle-left > #content { padding:0 2% 0 0; }
+.active.expand-opening a { right:1px; }
+/*contact-us section*/
+#contact ul li input, .regis-form-sec li input[type="text"], .regis-form-sec li input[type="password"], .jqTransformSelectWrapper, .regis-form-sec li label, #contact ul li textarea, .regis-form-sec li textarea, .comments { width:46.7%; }
+#contact ul li textarea.comments, #contact .corporate ul li textarea { margin:0; }
+#contact ul li textarea { height:75px; }
+#map { width:48%; }
+#map > #googleMap { height:280px !important; }
+#map .address p { font-size:13px; }
+.address-sec { font-size:14px; width:47%; }
+/*our support section*/
+.supporters-list li { width:87px; margin:10px 8px 10px 0; }
+/*donate section*/
+.donate-row > section:first-child { width:78%; }
+.tabbing-sec.donate ul li { font-size:10px; width:109px; }
+.donate-row > section { width:20%; }
+.donate-login form input.sbt_btn { margin:5px 10px 5px 0; }
+.donate-row .donate-login form h4 { margin:5px 0; }
+/*sponsor section*/
+.take-list li img { width:200px; }
+.about-left-banner a { width:100%; }
+/*our-work section*/
+.inner-middle-sec a.overview-btn strong { width:95px; }
+.inner-middle-sec a.doing-btn strong { width:179px; padding:15px 7px 15px 50px; }
+.inner-middle-sec a.help-btn strong { width:145px; padding:15px 8px 15px 50px; }
+.inner-middle-sec .donate-btn { margin:0 0 0 2px; }
+.inner-middle-sec .donate-btn strong { padding:15px 0; text-align:center; width:111px; }
+/*how-can-help section*/
+.how-can-help section { margin:0 1%; }
+/*Photo Gallery section*/
+.AG_classic .ag_thumbclassic { width: 26%; margin: 0 2% 2%; }
+/*advantage-benefit-cards-for-elders section*/
+.what-left, .what-right { width:18%; }
+.what-middle { width:56%; }
+.donate-row label { width:24%; }
+.donate-form select { width:75.2%; }
+.donate-form .date select { width:24.57%; }
+.donate-form .radio label { width:53%; }
+.donate-form .radio div { width:40%; }
+.home-slider-msg { margin:0;}
+.msg {/*bottom:0px; width:18%; margin-left:147px;*/}
+.don-but { width:17%; right:25px;}
+}
+
+ @media only screen and (max-width : 768px) {
+.jThumbnailScroller { width:85% !important; }
+#youtubegalleryplayerid_4, #YoutubeGallerySecondaryContainer4 { width:100% !important; }
+#YoutubeGalleryMainContainer4, #YoutubeGalleryMainContainer4 > div { width:98% !important; }
+.feature-sec .col:first-child a.break { width:66px; }
+.how-can-help section { background: url(../images/how-can-help-border-ipad.jpg) no-repeat 0 bottom #FFFFFF; }
+
+.log-heading{ padding:0 0 10px; line-height:24px;}
+.donate-row .col form{width:98%;}
+.home-bottom-left-sec { width:62%; margin:0 2%; }
+.home-bottom-left-sec .banner a { margin:0; width:50%; }
+.what-new-sec {/* margin:20px 0 0 2%; width:31%; */}
+.what-new-sec .flexslider-vec { width:95%; margin:0 auto; padding:1% 2% 0; }
+#content { padding:0 2%; }
+.home-bottom-sec { padding:18px 0px; }
+.left-nav li, .left-nav li.item-122.active > a, .left-nav li.item-122.deeper > a { padding:10px 30px 10px 10px; }
+.left-nav li a { font-size:13px; }
+.what-help-doing p img.right { margin:10px 0 0 10px; }
+.middle-div .item-page{padding:10px 0 0;}
+.middle-section .item-page{padding:10px 0 0;} 
+.right-section h2{padding:10px 0;}
+.tabbing-sec.donate strong{height:30px; font-size:11px; line-height:16px;}
+.donate-row .donate-right.col{width:24%;}
+.donate-row .donate-btn{ float:right; margin:0; }
+.donate-row .donate-login form td a{display:block; margin:10px 0 0;}
+.what-help-doing .what-heading{ background-position:center -2px; margin: 15px 0px;}
+.how-can-help{margin:0px 0px 20px; padding:20px 0;}
+.how-can-help h2{ padding:0 0 20px;}
+.how-can-help .how-help{margin: 0; background-position:center 12px;}
+ul.arrow-double li{ width:29%;}
+ }
+
+@media only screen and (max-width : 767px) {
+/* responsive header menu start */	
+
+#header { padding:0;}
+#header h1 { padding:5px 0; text-align:center; margin:15px 0 0; background:#F8C301; width:100%;}
+#header h1 img { width:250px; display:inline-block; }
+#header h1 a {display:block;}
+
+#header-res-nav > a.left { background:url(../images/main-menu.png) no-repeat 5px 7px #F8C301; padding:3px 8px 4px 30px; }
+#header-res-nav > a.right { background:#E5030D; color: #F8C301; margin:0 0 0 7px; float:right; position:inherit; left:0; margin-right:5px;}
+#header-res-nav > a { padding:3px 20px;}
+
+
+
+.main-menu, #header aside.col { display:none; width:auto; }
+#header .wrapper { text-align:right; }
+.feature-sec .col:first-child a.break { width:100%; }
+.home-bottom-left-sec .banner a { width:50%; }
+.about-left-banner a img{width:100%;}
+
+p { padding:0 0 5px; font-size:13px; }
+.main-menu nav, #header .top-nav { display:none; }
+#header-res-nav { display:inline-block; width:100%; position:relative; float:left; z-index:99999; height:33px; }
+#header-res-nav nav { display:block; }
+#header .wrapper { text-align:right; }
+#header-res-nav > a.right { width:auto; height:25px;}
+#header form input[type="text"] { width:186px; }
+.mm-list > li.item-171, .mm-list > li.item-119 { display:none !important; }
+.feature-sec { padding:8px 0; }
+.feature-sec .col:first-child a { width:100%; }
+.feature-sec .col { width:30%; text-align:center; margin:0 0 0 3%; }
+.feature-sec .col:first-child { margin:0 0 0 2%; }
+.feature-sec .col:first-child a.break, .feature-sec .figcaption a { padding:2% 0 1%; border-top:2px solid #fff; border-left:0; }
+.feature-sec .col:first-child a { padding:13px 0 12px; display:block; }
+.feature-sec h3, .home-bottom-sec h4, .home-bottom-sec h3 { font-size:18px; }
+.feature-sec .col:first-child a { padding:5% 0; }
+.feature-sec .figcaption a {font-size:12px; padding:26% 0; text-align:center; display:block; float:none; border:none;}
+.feature-sec .col.last a:first-child { padding:4% 5%; }
+.feature-sec .col.last a { padding:4% 8%; }
+.home-bottom-sec { padding:18px 0 0; }
+.feature-sec h3, .home-bottom-sec h4, .home-bottom-sec h3 { font-size:16px; margin:0 0 10px; }
+.what-new-sec h5 { font-size:13px; }
+.right-section > div embed { height:265px; }/* for Elder Policy Interventions */
+footer { margin:0 2%; }
+footer aside{width:38%;}
+footer section{width:57%;}
+/*about-us section*/
+.left-nav { display:none; }
+.left-section, .left-div.col, .right-section, .right-div.col{width:100%;}
+.about-left-banner { width:100%; text-align:center; }
+.about-left-banner a { display:inline-block; *display:inline;*zoom:1;vertical-align:top; float:none; margin:1%; }
+.about-left-banner a.link, .about-left-banner a.hide { display:none; }
+.middle-section,.middle-div.col, .what-help-doing, .how-can-help {width:92%; border:none; padding:0 4%;}
+#content { padding:0 0 2%; }
+.middle-section figure { text-align:center; }
+.right-section,.right-div.col { margin:0; }
+.journey { display:none; }
+.testimonial .profile { padding:10px 0 0; }
+.video > object, .video > object > embed { height:auto; }
+.testimonial .profile, .testimonial .profile img { text-align:center; float:none; }
+.testimonial .profile p { width:100%; padding:6px 0 0 0; }
+.middle-section h2, .what-help-doing h3, .how-can-help h3, #donate-page h2, .gift-card-page h3, h3.heading, .donate-row h2 { font-size:20px; padding:10px 0; }
+.inner-top-sec > section { line-height:0; }
+
+.breadcrumbs { padding:12px 0; }
+.breadcrumbs ul { margin:0 2%; }
+.inner-bottom-sec { padding:0 2%; }
+.donate-register { padding:0 2%; width:96%; }
+/* mission start here*/
+.middle-section h4, .how-can-help h4, .what-help-doing h4 { padding:3px 0; font-size:14px; }
+.center { display:none; }
+.right-section img { margin: 10px auto;/* display:none;*/ display:block; text-align:center; }/* right-side-images*/
+.supporters-list li img { margin:0 auto; }
+.right-section img.left-pic { margin:5px 10px 10px 0; }
+ul.red-arrow { border-bottom: 1px solid #BFBFBF; margin: 8px 0 13px; padding: 0 0 10px; }
+p.yellow-text { padding:0; }
+/*history section*/
+ul.pic-row li { width:30%; margin:0 4px; }
+ul.pic-row li strong { font-size:13px; }
+.middle-section .pic strong { font-size:14px; }
+.testimonial { margin:0; padding:0; }
+.right-section h4 { padding:12px 0 5px; }
+.middle-section p { padding:15px 0; font-size:14px; line-height:22px;}
+.middle-section figure {/* padding:8px 0 15px;*/ padding:8px 0 0; }
+/*Leadership start here*/
+.leadership-sec li figure, .leader-details-sec figure { width:95px; }
+.content_2 { margin:17px 0 30px 0 !important; }
+.leader-details { width:70%; margin:0 0 12px 12px; }
+.leader-details > p { padding:0; }
+.leadership-popup { width:90%; }
+.leadership-sec li { font-size:13px; }
+/*financial section*/	
+.annual-audited-sec-in li > div, .publication-sec > div { float:right; }
+.graph { text-align:center; margin:0 0 3%; }
+.graph img { vertical-align:top; margin:1% 0 0 2%; width:32%; float:left;}
+.graph img:first-child { margin:1% 0 1%; }
+/*awards-recognition section*/
+
+.award-list li h4 { padding:15px 0; }
+.item-page p { padding:0 0 10px; }
+.left-pic, .right-pic { width:217px; }
+.right-top >.left-pic { width:auto; float:left; }
+.press-releases-list td a { font-size:13px; }
+/*carrer section 480-320*/
+.middle-left { width:100%; border:none; }
+.collapse { margin:-10px 0 10px; padding:5px 8px; }
+.tab a { padding:5px 8px; font-size:13px; }
+.expand-opening { margin:0 0 10px; }
+.expand-opening p { padding: 8px; margin:0; width:auto; height:auto; border-radius:0; text-align:left; background:none; box-shadow:none; font-size:14px; }
+.expand-opening p img { margin:0; vertical-align:middle; display:none; }
+.expand-opening p >br { display:none; }
+.expand-opening a, .active.expand-opening a { top:-10px; font-size:0; padding:7px 20px; right:5px; width:0; height:20px; overflow:hidden; }
+#faq-expand .expand-opening { background:#f5f5f5; }
+ul.red-arrow li { font-size:13px; padding:0 0 10px 16px; }
+/*contact-us section*/
+ .form-sec-inner li { margin:0 0 10px; }
+#contact ul li input, .regis-form-sec li input[type="text"], .regis-form-sec li input[type="password"], .jqTransformSelectWrapper, .regis-form-sec li label, #contact ul li textarea, .regis-form-sec li textarea, .comments { width:98%; margin:0; font-size:13px; }
+#contact ul li input, #contact ul li textarea { padding-left:5px; }
+#contact ul li input:first-child { margin:0 0 10px; }
+#contact ul li textarea { margin:0 0 10px; }
+#contact ul li input[type="submit"], .submit, .form-sec-inner li input[type="submit"] { width:100px; font-size:14px; }
+.input-80 { max-width:98%; }
+.city { width:100%; }
+.city input { width:98% !important; padding:0 1% !important; }
+#map { width:98%; }
+.address-sec { width:100%; }
+.address-detail { display:inline-block; *display:inline;
+*zoom:1;
+vertical-align:top; width:272px; }
+/*our support section*/
+.supporters-list li { width:14%; margin:1% 1% 1% 0; display:inline-block; *display:inline; *zoom:1;vertical-align:top; float:none; }
+.supporters-col figure { display:none; }
+div#tipDiv { width:93%; left:1% !important; padding:7px 5px; }
+/*donate section*/
+.donate-row .col section.content { margin: 0 0 10px; }
+.donate { overflow:auto; }
+.tabbing-sec.donate > ul, .donate-row .col section.content { clear:both; }
+.tabbing-sec.donate ul li { width:31%; margin:0 1% 10px; }
+.donate-row .donate-btn { width:160px; font-size:15px; }
+.donate-row .col section { width:100%; }
+.donate-row .donate-login form, #form-login { width:97%; }
+.donate-row > section:first-child { width:100%; border:none; margin:0; }
+.donate-row > section { width:100%; }
+.donate-row .col form { width:100%; margin:0 0 10px; }
+.donate-row .col form#form1 { width:96%; padding:2%; }
+.donate-row .donate-login form input { width:93%; }
+.donate-banner { display:block; text-align:center; margin:0 0 15px; }
+.donate-row label, .donate-form .radio label { display:block; width:100%; margin:0 0 5px; }
+.log-heading { text-align:left; line-height:24px;}
+.log-heading >br { display:none; }
+.donate-invite li img { float:none; }
+.donate-invite li { line-height:0; }
+#selected-currency { margin:0; }
+.donate-form .jqTransformSelectWrapper { width:98% !important; }
+.donate-row input, .donate-row textarea, .dashform input[type="text"], .dashform input[type="login_name"], .dashform input[type="password"], .dashform textarea { width:96%; font-size:13px; font-family:'Open Sans', sans-serif; padding:6px 5px; margin:0 0 5px; }
+.donate-row select { padding:6px 5px 0; margin:0 0 5px; font-size:13px; font-family:'Open Sans', sans-serif; width:98%; }
+.donate-form .date select { width:32.5%; }
+.donate-form select option { font-size:13px; padding:0 0 5px 8px; }
+.jqTransformSelectWrapper-nation div span, .jqTransformSelectWrapper-date div span { font-size:13px; padding-left:2px; line-height:20px; }
+.donate-form li.date .jqTransformSelectWrapper { width:96% !important; margin:0 0 10px 0; }
+.donate-form .jqTransformSelectWrapper:first-child { margin:0 0 8px; }
+.cheque-dd-sec { padding:0 0 0 38px; width:88%; }
+.donate-row h3 { font-size:15px; }
+.form-sec-inner li.small-text small { padding:10px 0 5px; }
+/*take action*/
+.take-list li img { width:160px; }
+/*our-work section*/
+.item-page p img { margin:10px auto 10px; display:block; }
+.item-page p img.left-pic{ margin:0 10px 0 0;} 
+.inner-middle-sec { padding:0 2%; }
+.inner-middle-sec a { display:block; padding:0 0 2px; }
+.inner-middle-sec a strong { margin:0; }
+.inner-middle-sec .donate-btn strong { text-align:center; }
+.inner-middle-sec a.doing-btn strong { padding:15px 30px 15px 60px; }
+/*how-can-help section*/
+.what-help-doing h3, .how-can-help h3 { /*margin:8px 0 0;*/ margin:0; padding:0; background:none; text-align:left; }
+.what-help-doing h3 strong, .how-can-help h3 strong { font-size:16px; padding:0; }
+.what-help-doing p, .how-can-help p { padding:15px 0; font-size:14px; line-height:22px;}
+.how-can-help section > div > img { display:none; }
+.how-can-help { margin: 0; background:none; }
+.how-can-help h3 { margin:0; padding:0; }
+.how-can-help .col { width:100%; }
+.how-can-help .col:first-child { width:100%; border:none; }
+.how-can-help section { padding:0; background:none; margin:0; }
+a.red-btn strong { padding:12px 20px; font-size:14px; }
+/*PHYSIOCARE PROGRAMME section*/
+/*.what-help-doing p img{ width:230px;}*/
+/*Photo Gallery section*/
+.AG_classic .ag_thumbclassic { width: 27%; margin: 0 2% 1%; }
+/*active-ageing-centres section*/
+.item-page { min-height:inherit; }
+/*Research section*/	
+.right-top > figure { float: left; margin: 0 15px 0 0; }
+.research { float:left; width:47%; text-align:left; }
+.research.tabbing-sec h5 { margin:8px 4px; line-height:21px; }
+/*advantage-benefit-cards-for-elders section*/
+.what-left, .what-right, .what-middle { width:100%; margin:15px 0 0; }
+.what-left img, .what-right img { width:23.5%; margin:0 0 0 1%; }
+.what-left img:first-child, .what-right img:first-child { margin:0; }
+.right-top { display:block; }
+.right-top > object > embed { height:380px; }
+/*demand-for-universal-pension section*/
+.right-section.col > p img { display: block; margin: 0 auto 10px; text-align: center; }/*demand-for-universal-pension section*/
+.item-page > .sponsor-left p img, .item-page > .sponsor-right img, .hide { display:none; }
+.what-new-sec, footer { margin:20px 2% 0; width:96%; display:block;}
+footer { text-align:center;}
+.home-bottom-left-sec { width:92%; margin:0; padding:0 4%; }
+.home-bottom-left-sec p { font-size:14px; margin:15px 0; line-height:22px;}
+.testimonial img.right-col { float:right; margin:2% 0 0 0; }
+.greeting-left { width:100%; margin:0; }
+.gift-card-page .listing li { width:44.5%; }
+.greeting-right { width:100%; }
+.gift-card-page h3 { padding:8px 0 10px; }
+/*site-map*/
+/*.registration section*/
+.registration-table table td:first-child, .registration-table table td { width:100%; }
+.registration-table table td { margin:8px 0 0; }
+.registration-table .input2 input:first-child { width:20%; }
+.registration-table .input2 input { width:70%; margin:0; }
+.network-list { margin:10px 0; }
+.leadership-popup p { line-height:20px; font-size:12px; }
+.news-list { margin:8px 0 0; }
+.network-list li { padding:2% 3%; }
+.about-left-banner a { width:47%; }
+.mapdesc { width:44% !important; margin:0 0 5px!important; }
+.network.content_2, .mCSB_scrollTools .mCSB_draggerRail { margin:15px 0 0; height:465px !important; overflow:auto; }
+/*7-714*/
+.btn-sec { margin:0; }
+.home-slider-msg { margin:0 0 90px; }
+.donate-row .donate-left.col{width:68%;}
+.donate-row .donate-right.col{width:30%;}
+.donate-banner img{max-width:98%;}
+.video{margin:10px 20px 0 0;}
+.what-help-doing .what-heading h2 , .how-can-help h2{ text-align:left; width:auto; font-size:20px; padding:0;}
+.what-help-doing h3{ font-size:17px;}
+.golden-msg{ float:left;}
+.msg{ bottom:5px; width:25%;}/*
+.msg a{width:50%; margin:0px auto 10px; float:none; display:block;}
+.msg a img{width:80%; margin:0px auto; float:none;}*/
+.graph img { float:left;}
+ul.arrow-double li{width:45%;}
+.how-can-help .how-help{margin:0px 0 15px; background-position:0 0; background:none;}
+.feature-sec { padding:20px; width:auto;}
+.feature-sec li{margin:0 6% 20px 0; width:47%;}
+.feature-sec > li:nth-child(2n) {margin-right:0;}
+
+.feature-sec .figure >img{ width:100%;}
+
+.middle-section h2, .middle-section h1, .what-help-doing h2, .how-can-help h2, #donate-page h2, .gift-card-page h3, h3.heading, .middle-section h2, .what-help-doing h3, .how-can-help h3, #donate-page h2, .gift-card-page h3, h3.heading, .donate-row h2 { padding:25px 0 10px 0;}
+
+.right-section iframe { width:92% !important; margin:0 4% !important;}
+
+
+}
+
+@media only screen and (min-width:480px) and (max-width:640px) {
+.home-slider-msg { margin:0 0 0;}
+.feature-sec .figcaption a{padding:26% 0;}
+.don-but{width:13%; right:25px; bottom:2px;}
+
+
+
+}
+
+@media only screen and (max-width : 480px) {
+/* responsive header menu start */	
+#header-res-nav > a.right { height:26px; }
+/* responsive header menu end */		
+.feature-sec .col{width:310px; display: block; float: none; margin: 0 auto; }
+.feature-sec .col:first-child a.break, .feature-sec .col:first-child a, .feature-sec .figcaption a {/*border-left:2px solid #fff; border-top:0;*/ width:32%; float:left; display:inline-block; }
+.feature-sec .col:first-child { margin:0 auto; }
+.feature-sec .col:first-child a { border:none; }
+.feature-sec .figcaption a{padding:0; text-align:center; float:none; width:auto;}
+.feature-sec .col.last a { width:16%; }
+.feature-sec h3, .home-bottom-sec h4, .home-bottom-sec h3 { height:auto; }
+footer aside, footer section { width:100%; }
+footer section { text-align:center; }
+#header nav { display:block; }
+.feature-sec { padding:20px;}
+.feature-sec .figcaption a{padding:26% 0;}
+.footer section, .footer aside { width:100%; padding:10px 0;}
+.footer aside img { width:250px; margin:10px 0;}
+.what-new-sec .flexslider-vec { height:265px; }
+.what-new-sec .flex-viewport li { height:142px; }
+.right-top >.left-pic { margin:10px auto 10px; /*display:block; float:none;*/ }
+ul.arrow-double.news-list li, ul.arrow-double.salient-list li { width:92%; }
+/*about-us section*/
+.inner-bottom-sec { width:96%; padding:0 2%; }
+.about-left-banner a, .about-left-banner a:first-child { width:47%; }
+.middle-section h2, .what-help-doing h3, .how-can-help h3, #donate-page h2, .gift-card-page h3, h3.heading, .donate-row h2 { font-size:18px;}
+/*history section*/
+ul.pic-row li { width:30%; margin:0 0 0 1%; display:inline-block; *display:inline; *zoom:1; vertical-align:top; float:none;}
+ul.pic-row li strong { font-size:11px; }
+/*Leadership start here*/
+.leader-details { width:55%; }
+.leadership-sec li figure, .leader-details-sec figure, .leadership-sec li figure img, .leader-details-sec figure img { width:85px; }
+.leadership-popup .close { width:24px; right:0; }
+/*financial section*/
+.annual-audited-sec { width:100%; float:none; margin:5px 0 20px; }
+.graph{padding:0;}
+.graph img,.graph img:first-child{width:31%; margin:0 1%;}
+/*awards-recognition section*/
+.left-pic, .right-pic { float:none; display:block; text-align:center; width:auto; }
+/*carrer section*/
+.tab a { padding:5px 8px; font-size:11px; }
+.expand-opening p { font-size:13px; }
+/*contact-us section*/
+.address-detail { width:100%; padding:0; font-size:13px; }
+.address-detail img { margin:0 4px 0 0; }
+/*our support section*/
+.supporters-list li { width:21%; }
+/*donate section*/
+/*sponsor section*/
+.sponsor-left { border:none; padding:0; width:100%; }
+.sponsor-right { margin:0; width:100%; }
+/*take action*/
+.take-list li, .take-list li.right, .take-list li:first-child { padding:0; border:none; }
+.take-list li img, .take-list li br { display:none; }
+/*PHYSIOCARE PROGRAMME section*/
+.what-help-doing p img, .what-help-doing p img.right { /*width:100%; */ float:none; display:block; margin:10px auto; }
+.what-help-doing h4.right-align { text-align:left; }
+/*Research section*/	
+.right-top > figure { float:none; margin:0 0 10px; }
+.right-top > figure img { width:100%; }
+.research { float:none; width:100%; }
+/*advantage-benefit-cards-for-elders section*/
+.what-left, .what-right { display:block; text-align:center; }
+.what-left img, .what-right img { width:auto; display:block; float:none; margin: 2% auto 0; }
+.what-left img:first-child, .what-right img:first-child { margin:0 auto 2%; }
+.what-right { margin:5px 0 10px; }
+.what-middle { margin:0; }
+.right-top > object > embed { height:320px; }
+.right-section > div embed { height:195px; }
+/* for Elder Policy Interventions */	
+/*physiocare-donate section*/
+.tabbing-sec .content img { display:block; margin:10px auto; float:none; }
+.donate-form .date select { width:32%; }
+.testimonial .content p i strong >br { display:none; }
+.tabbing-sec.donate ul li a { font-size:8px; }
+.gift-card-page h3 { padding:8px 0 10px; }
+.gift-card-page .listing li { margin:0 0 0 2%; height:395px; width:41.5%; }
+.gift-card-page .listing li:first-child { margin:0; }
+.imageDiv { text-align:center; }
+.siremap-list ul { width:100%; margin:0 0 5px; }
+.pagination-list li { padding:2px; }
+.pagination-list li a { padding:5px 10px; font-size:11px; }
+.donate-row select { width:99%; }
+/*.registration section*/
+.registration-table table tr { margin:0; }
+.registration-table table td { margin:0; }
+.registration-table input, .registration-table .select-col { margin:8px 0 20px; }
+.registration-table .input2 input:first-child { margin:8px 2% 20px 0; }
+.registration-table .input2 input { width:62%; }
+.registration-table table tr.select-col td { margin:0 0 0 2%; }
+.registration-table input { width:92%; }
+.registration-table select { width: 99% !important; }
+.ymemformfield { display:block; margin:10px 0 20px; }
+.registration-table input.sbt_btn { margin:0; }
+.home-slider-msg { margin:0 0 80px; }
+ul.arrow-double.news-list li a { font-size:13px; }
+.network-list li { padding:3% 5%; }
+#map { width:96%; margin:0 0 10px; }
+.mapdesc { width:90% !important; height:auto !important; }
+.network.content_2, .mCSB_scrollTools .mCSB_draggerRail { height:443px !important; }
+.home-slider-msg { margin:0 0 5px !important;}
+
+.don-but { width:13%; right:25px; bottom:2px;}
+.donate-row .donate-left.col{width:99%; border:none;}
+.donate-row .donate-right.col{width:62%; margin:0 auto; float:none; display:block; text-align:center;}
+.donate-row .donate-right.col h2{ text-align:center; }
+footer nav{ text-align:center;}
+footer nav li{display:inline-block; background:none; margin:5px 10px; border-bottom:solid 1px #ddd; padding:0;}
+footer nav li a { display:block; padding:5px;}
+ul.arrow-double li{width:95%;}
+.item-page p img.left-pic{ margin:0 auto;} 
+.feature-sec h2,.feature-sec .figcaption strong{font-size:13px; line-height:16px; margin:0px 0px 10px;}
+}
+
+@media only screen and (max-width : 479px) {
+.home-bottom-left-sec .banner a:first-child{margin:0 0 10px 0; width:98%;}
+.home-bottom-left-sec .banner a{width:100%; margin:0 0 10px -10px;}
+.donate-row .donate-right.col{width:90%;}
+.feature-sec li:hover .figcaption{ height:88%;}
+}

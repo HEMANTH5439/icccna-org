@@ -1,0 +1,44 @@
+* html .slides { height: 1%; }
+html[xmlns] .slides { display: block; }
+.no-js .slides > li:first-child{display:block;}
+.slides:after { content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; } 
+
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('fonts/flexslider-icon.eot');
+	src:url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/flexslider-icon.woff') format('woff'),
+		url('fonts/flexslider-icon.ttf') format('truetype'),
+		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.flexslider,.flexslider-home,.flexslider-vec{position:relative;}
+.flex-direction-nav{*height: 0;}
+.flexslider .slides { zoom: 1; }
+.carousel li{margin-right:5px;}
+.flexslider{position:relative;}
+
+/* Direction Nav */
+.flex-direction-nav{position:absolute; width:100%; top:50%; /*display:none;*/} /* changes */
+.flex-direction-nav li{ padding:0; margin:0; list-style:none;}
+.flex-direction-nav li a{width:17px; height:23px; cursor:pointer; font-size:0; line-height:0; text-indent:-99999px;}
+.flexslider .flex-prev,.flexslider-home .flex-prev{float:left; background:url(../images/slider-left-arrow.png) no-repeat 0 0; margin:0 0 0 5px;}
+.flexslider .flex-next,.flexslider-home .flex-next{float:right; background:url(../images/slider-right-arrow.png) no-repeat right 0; margin:0 5px 0;}
+
+.flexslider-vec .flex-direction-nav{width:55px; right:0; top:-33px;}
+.flexslider-vec .flex-direction-nav li{width:20px; display:inline;}
+.flexslider-vec .flex-direction-nav li a{width:20px; height:20px;}
+.flexslider-vec .flex-prev{float:left; background:url(../images/arrow-bottom.png) no-repeat 0 0; margin:0 0 0 5px;}
+.flexslider-vec .flex-next{float:right; background:url(../images/arrow-top.png) no-repeat 0 0; margin:0 5px 0;}
+
+/* Control Nav */
+.flex-control-nav{width:auto; position: absolute; bottom:17px; right:20px; float:right;}
+.flex-control-nav li{margin:0 0 0 4px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li a{font-size:0; line-height:0; text-indent:-99999px; width:11px; height:11px; background:url(../images/circle-bullet.png) no-repeat 0 0; display:block; cursor:pointer;}
+.flex-control-nav li a:hover, .flex-control-nav li a.flex-active{background-position:0 -11px;}
+
+/* edit */ 
+.flexslider-home .flex-control-nav,.flexslider-vec .flex-control-nav{display:none;}
