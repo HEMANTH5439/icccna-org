@@ -450,5 +450,39 @@ INDIA CHRISTIAN YOUTH OF CHICAGO BASKETBALL TOURNAMENT</div>
 
 
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"625d18e9aa28431a8801769c83b2daaf","r":1}' crossorigin="anonymous"></script>
+<script src="js/auth.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (localStorage.getItem('icccna_admin_session')) {
+    const adminControls = document.createElement('div');
+    adminControls.style.cssText = "background:#0088cc; color:#fff; padding:10px; margin-bottom:15px; border-radius:5px;";
+    adminControls.innerHTML = `
+      <strong>➕ Add New Event Entry:</strong><br/>
+      <input id="new-event-title" placeholder="Year & Venue" style="padding:4px; margin-top:5px; width:45%;">
+      <input id="new-event-desc" placeholder="City & Location" style="padding:4px; margin-top:5px; width:45%;">
+      <button id="btn-add-event" style="padding:4px 10px; background:#fff; color:#0088cc; border:none; font-weight:bold; cursor:pointer;">Add</button>
+    `;
+    document.body.insertBefore(adminControls, document.body.firstChild);
+
+    document.getElementById('btn-add-event').addEventListener('click', function() {
+      const title = document.getElementById('new-event-title').value.trim();
+      const desc = document.getElementById('new-event-desc').value.trim();
+      if (title && desc) {
+        const article = document.createElement('div');
+        article.className = 'article';
+        article.style.paddingLeft = '10px';
+        article.innerHTML = `
+          <div class="title style1" style="padding-top:4px;">${title}</div>
+          <div align="left" class="style2"><strong>${desc}</strong></div>
+          <br>
+        `;
+        document.body.appendChild(article);
+        document.getElementById('new-event-title').value = '';
+        document.getElementById('new-event-desc').value = '';
+      }
+    });
+  }
+});
+</script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl505060'},{'dcenter':'p3'},{'cp_id':'10286166'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>

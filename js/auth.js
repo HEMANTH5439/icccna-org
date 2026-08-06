@@ -82,7 +82,7 @@
             <form id="auth-form-login">
               <div class="auth-form-group">
                 <label>Admin Email</label>
-                <input type="email" id="login-email" placeholder="chellamhemanth@gmail.com" required>
+                <input type="email" id="login-email" placeholder="email@example.com" required>
               </div>
               <div class="auth-form-group">
                 <label>Password</label>
