@@ -121,13 +121,25 @@ kjoer = setInterval(fmoveb, speed);
 };
 };
 
-// Enable mouse wheel scrolling up/down for viewers & admins
+var pauseTimer = null;
+
+// Enable mouse wheel scrolling up/down for viewers & admins with 5s auto-scroll pause
 $(document).on('mousewheel DOMMouseScroll', function(e) {
   var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+  
+  // Pause auto-scrolling ticker
+  clearInterval(kjoer);
+
   $("div.article").each(function(){
     var atop = parseInt($(this).css("top"));
-    $(this).css("top", (delta < 0 ? atop - 25 : atop + 25) + "px");
+    $(this).css("top", (delta < 0 ? atop - 30 : atop + 30) + "px");
   });
+
+  // Resume auto-scroll after 5 seconds of inactivity
+  if (pauseTimer) clearTimeout(pauseTimer);
+  pauseTimer = setTimeout(function() {
+    checkdir();
+  }, 5000);
 });
 
 $("div.fup").hover(function(){
