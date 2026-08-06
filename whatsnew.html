@@ -113,13 +113,22 @@ $("div.article:eq("+fall+")").clone().insertBefore("div.article:eq(0)").css("top
 };
 
 
-function checkdir(){
+ function checkdir(){
 if(fdir == 0){
 kjoer = setInterval(fmove, speed)}
 else{
 kjoer = setInterval(fmoveb, speed);
 };
 };
+
+// Enable mouse wheel scrolling up/down for viewers & admins
+$(document).on('mousewheel DOMMouseScroll', function(e) {
+  var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+  $("div.article").each(function(){
+    var atop = parseInt($(this).css("top"));
+    $(this).css("top", (delta < 0 ? atop - 25 : atop + 25) + "px");
+  });
+});
 
 $("div.fup").hover(function(){
 clearInterval(kjoer);
