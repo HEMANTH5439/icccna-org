@@ -134,6 +134,19 @@
       el.style.outline = '1px dashed #0088cc';
     });
 
+    // Make content inside embedded iframes (like whatsnew.html) editable
+    document.querySelectorAll('iframe').forEach(iframe => {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (iframeDoc) {
+          iframeDoc.querySelectorAll('p, div, span, a, h1, h2, h3').forEach(el => {
+            el.contentEditable = true;
+            el.style.outline = '1px dashed #0088cc';
+          });
+        }
+      } catch(e) {}
+    });
+
     if (!document.getElementById('admin-bar')) {
       const adminBar = `
         <div id="admin-bar" style="position:fixed; bottom:15px; right:15px; background:#0088cc; color:#fff; padding:10px 20px; border-radius:30px; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:99999; font-family:sans-serif; font-size:13px;">
