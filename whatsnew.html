@@ -123,13 +123,31 @@ kjoer = setInterval(fmoveb, speed);
 
 var pauseTimer = null;
 
-// Attach non-passive wheel event listener to prevent parent page scrolling
+// Attach non-passive wheel event listener with boundary clamping (cannot scroll past first or last entry)
 window.addEventListener('wheel', function(e) {
   e.preventDefault();
   e.stopPropagation();
   
   var delta = e.deltaY;
   clearInterval(kjoer);
+
+  var $first = $("div.article:first");
+  var $last = $("div.article:last");
+  
+  var firstTop = parseInt($first.css("top")) || 0;
+  var lastTop = parseInt($last.css("top")) || 0;
+  var lastHeight = $last.outerHeight() || 50;
+  var containerHeight = $(window).height();
+
+  // Boundary checks:
+  // If trying to scroll up (delta < 0) when first item is at top 0, block scrolling past top
+  if (delta < 0 && firstTop >= 0) {
+    return;
+  }
+  // If trying to scroll down (delta > 0) when last item bottom reaches container bottom, block scrolling past end
+  if (delta > 0 && (lastTop + lastHeight) <= containerHeight) {
+    return;
+  }
 
   $("div.article").each(function(){
     var atop = parseInt($(this).css("top")) || 0;
