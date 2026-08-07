@@ -6,6 +6,12 @@
       name: "Hemanth Chellam",
       // SHA-256 hash for 'Pikachu'
       hash: "a7c280e773d1d2e4f243d88f2e1a5665aff97694f741cbd78ee9edf62954612c"
+    },
+    {
+      email: "admin@icccna.org",
+      name: "ICCCNA Admin",
+      // SHA-256 hash for 'IcccnaAdmin2026!'
+      hash: "ad5ca72d3f31f3f93994d190ab5ffe0737c62c174fe8230745560cf107cdf45d"
     }
   ];
 
