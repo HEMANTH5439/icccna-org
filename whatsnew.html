@@ -136,22 +136,20 @@ window.addEventListener('wheel', function(e) {
   
   var firstTop = parseInt($first.css("top")) || 0;
   var lastTop = parseInt($last.css("top")) || 0;
-  var lastHeight = $last.outerHeight() || 50;
+  var lastHeight = $last.outerHeight() || 40;
   var containerHeight = $(window).height();
 
-  // Boundary checks:
-  // If trying to scroll up (delta < 0) when first item is at top 0, block scrolling past top
+  // If scrolling up (delta < 0) and top item is already at or below top (firstTop >= 0), prevent scrolling higher
   if (delta < 0 && firstTop >= 0) {
     return;
   }
-  // If trying to scroll down (delta > 0) when last item bottom reaches container bottom, block scrolling past end
-  if (delta > 0 && (lastTop + lastHeight) <= containerHeight) {
-    return;
-  }
+
+  // Calculate new position step
+  var moveStep = (delta > 0 ? -35 : 35);
 
   $("div.article").each(function(){
     var atop = parseInt($(this).css("top")) || 0;
-    $(this).css("top", (delta > 0 ? atop - 35 : atop + 35) + "px");
+    $(this).css("top", (atop + moveStep) + "px");
   });
 
   if (pauseTimer) clearTimeout(pauseTimer);
