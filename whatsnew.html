@@ -123,7 +123,7 @@ kjoer = setInterval(fmoveb, speed);
 
 var pauseTimer = null;
 
-// Attach non-passive wheel event listener with boundary clamping (cannot scroll past first or last entry)
+// Attach non-passive wheel event listener with smooth scrolling and 5s pause
 window.addEventListener('wheel', function(e) {
   e.preventDefault();
   e.stopPropagation();
@@ -132,20 +132,14 @@ window.addEventListener('wheel', function(e) {
   clearInterval(kjoer);
 
   var $first = $("div.article:first");
-  var $last = $("div.article:last");
-  
   var firstTop = parseInt($first.css("top")) || 0;
-  var lastTop = parseInt($last.css("top")) || 0;
-  var lastHeight = $last.outerHeight() || 40;
-  var containerHeight = $(window).height();
 
-  // If scrolling up (delta < 0) and top item is already at or below top (firstTop >= 0), prevent scrolling higher
+  // Don't scroll higher than the top of the first item
   if (delta < 0 && firstTop >= 0) {
     return;
   }
 
-  // Calculate new position step
-  var moveStep = (delta > 0 ? -35 : 35);
+  var moveStep = (delta > 0 ? -40 : 40);
 
   $("div.article").each(function(){
     var atop = parseInt($(this).css("top")) || 0;
