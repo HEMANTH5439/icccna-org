@@ -124,8 +124,14 @@ kjoer = setInterval(fmoveb, speed);
 var pauseTimer = null;
 
 // Enable mouse wheel scrolling up/down for viewers & admins with 5s auto-scroll pause
-$(document).on('mousewheel DOMMouseScroll', function(e) {
-  var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+$(document).on('mousewheel DOMMouseScroll wheel', function(e) {
+  // Prevent outer parent window from scrolling
+  if (e.preventDefault) e.preventDefault();
+  if (e.stopPropagation) e.stopPropagation();
+  e.returnValue = false;
+
+  var oe = e.originalEvent || e;
+  var delta = oe.wheelDelta || -oe.detail || -oe.deltaY;
   
   // Pause auto-scrolling ticker
   clearInterval(kjoer);
@@ -140,6 +146,8 @@ $(document).on('mousewheel DOMMouseScroll', function(e) {
   pauseTimer = setTimeout(function() {
     checkdir();
   }, 5000);
+
+  return false;
 });
 
 $("div.fup").hover(function(){
