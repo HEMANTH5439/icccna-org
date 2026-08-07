@@ -123,7 +123,7 @@ kjoer = setInterval(fmoveb, speed);
 
 var pauseTimer = null;
 
-// Attach non-passive wheel event listener with smooth scrolling and 5s pause
+// Infinite seamless wheel loop scrolling with 5s pause
 window.addEventListener('wheel', function(e) {
   e.preventDefault();
   e.stopPropagation();
@@ -131,12 +131,26 @@ window.addEventListener('wheel', function(e) {
   var delta = e.deltaY;
   clearInterval(kjoer);
 
-  var $first = $("div.article:first");
-  var firstTop = parseInt($first.css("top")) || 0;
-
-  // Don't scroll higher than the top of the first item
-  if (delta < 0 && firstTop >= 0) {
-    return;
+  // Recycle items for infinite seamless looping
+  if (delta > 0) {
+    // Scrolling down: recycle top article to bottom when scrolled past
+    var $first = $("div.article:first");
+    var firstTop = parseInt($first.css("top")) || 0;
+    if (firstTop < -80) {
+      var $last = $("div.article:last");
+      var lastTop = parseInt($last.css("top")) || 0;
+      var lastH = $last.outerHeight() || 40;
+      $first.appendTo($first.parent()).css("top", (lastTop + lastH) + "px");
+    }
+  } else {
+    // Scrolling up: recycle bottom article to top when scrolled high
+    var $first = $("div.article:first");
+    var firstTop = parseInt($first.css("top")) || 0;
+    if (firstTop > 10) {
+      var $last = $("div.article:last");
+      var lastH = $last.outerHeight() || 40;
+      $last.prependTo($last.parent()).css("top", (firstTop - lastH) + "px");
+    }
   }
 
   var moveStep = (delta > 0 ? -40 : 40);
